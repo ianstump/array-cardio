@@ -102,7 +102,7 @@ const sortedYearLived = inventors.sort((a, b) => {
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 const sortLastName = people.sort((a, b) => b - a);
-console.log(sortLastName);
+//console.log(sortLastName);
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
@@ -122,3 +122,10 @@ const data = [
   "car",
   "truck"
 ];
+
+const sumCar = data.reduce((total, car) => {
+  total[car] = (total[car] || 0) + 1;
+  return total;
+}, {});
+
+console.log(sumCar);
